@@ -23,4 +23,8 @@ app.use(
 
 app.use(express.json({ limit: "50mb" }));
 
+import userRoute from "./routes/user.routes.js";
+
+app.use("/api/v1/users", userRoute);
+
 export { app };
